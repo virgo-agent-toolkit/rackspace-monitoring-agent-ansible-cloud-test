@@ -1,5 +1,5 @@
 ---
-- git: repo=https://github.com/virgo-agent-toolkit/rackspace-monitoring-agent
+- git: repo={{ agent_repo }}
        dest={{ agent_directory }}
        version={{ agent_branch }}
        recursive=yes

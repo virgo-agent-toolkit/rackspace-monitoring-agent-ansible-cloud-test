@@ -1,5 +1,7 @@
 ---
 ## Apt
+- command: add-apt-repository --yes ppa:kalakris/cmake
+  when: ansible_pkg_mgr == 'apt'
 - apt: upgrade=dist update_cache=yes
   when: ansible_pkg_mgr == 'apt'
 - apt: name={{ item }} state=present

@@ -2,3 +2,4 @@
 # vars file for virgo-master
 agent_directory: /root/rackspace-monitoring-agent
 agent_branch: luvi-up
+agent_repo: https://github.com/virgo-agent-toolkit/rackspace-monitoring-agent
