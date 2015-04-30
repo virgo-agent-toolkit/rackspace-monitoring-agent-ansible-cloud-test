@@ -1,0 +1,25 @@
+---
+## Apt
+- apt: upgrade=dist update_cache=yes
+  when: ansible_pkg_mgr == 'apt'
+- apt: name={{ item }} state=present
+  when: ansible_pkg_mgr == 'apt'
+  with_items:
+    - reprepro
+    - git-core
+    - devscripts
+    - debhelper
+    - build-essential
+    - cmake
+## Yum
+- yum: name=* state=latest
+  when: ansible_pkg_mgr == 'yum'
+- yum: name={{ item }} state=latest
+  when: ansible_pkg_mgr == 'yum'
+  with_items:
+    - '@Development\ tools'
+    - git
+    - createrepo
+    - gcc-c++
+    - rpm-build
+    - cmake

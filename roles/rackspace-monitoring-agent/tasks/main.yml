@@ -1,0 +1,8 @@
+---
+- git: repo=https://github.com/virgo-agent-toolkit/rackspace-monitoring-agent
+       dest={{ agent_directory }}
+       version={{ agent_branch }}
+       recursive=yes
+       force=yes
+- command: make chdir={{ agent_directory }}
+- command: make package chdir={{ agent_directory }}
