@@ -13,6 +13,7 @@
     - debhelper
     - build-essential
     - cmake
+    - vim
 ## Yum
 - yum: name=* state=latest
   when: ansible_pkg_mgr == 'yum'
@@ -25,3 +26,4 @@
     - gcc-c++
     - rpm-build
     - cmake
+    - vim
