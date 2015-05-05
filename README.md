@@ -6,11 +6,17 @@ Create a `servers` file within the root of this project in the following
 format:
 
 ```
-[rpmhosts]
+[rpm]
 192.168.0.1
 
-[debhosts]
+[deb]
 192.168.0.2
+
+[arch]
+192.168.0.3
+
+[arch:vars]
+ansible_python_interpreter=/usr/bin/python2
 ```
 
 Running the ansible-playbook will automatically:
